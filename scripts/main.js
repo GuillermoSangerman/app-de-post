@@ -1,6 +1,6 @@
 import { editPost, cancelEdition, saveEdition } from './editPost.js'
-import {loadPosts} from './showPost.js'
-import { deletePost } from './deletePost.js'
+import { loadPosts } from './showPost.js'
+import { deleteFila } from './deletePost.js'
 import { toggleModal, newPost } from './createPost.js'
 
 const add = document.querySelector('#add')
@@ -22,7 +22,7 @@ function buttonsAction(event) {
     let id = parseInt(target.closest('li').id)// id del post sobre el cual se hizo click
 
     if (target.id === 'delete') { // validar si se hizo click sobre el boton delete
-        deletePost(id) // llamar a la function de eliminar el post
+        deleteFila(id) // llamar a la function de eliminar el post
     } else if (target.id === 'edit') { // validar si se hizo click sobre el boton edit
         editPost(id) // llamar a la function de editar el post
     }
